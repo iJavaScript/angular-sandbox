@@ -1,1 +1,29 @@
-<p>This is the directives view.</p>
+<h2>This is the directives view.</h2>
+
+<div ng-init="someProperty = 'some data'">
+
+  <div ng-init="siblingProperty = 'more data'">
+    Inside Div Two: {{ aThirdProperty }}
+
+    <div ng-init="aThirdProperty = 'data for 3rd property'"
+         ng-controller="SomeController">
+      Inside Div Three: {{ aThirdProperty }}
+
+      <div ng-init="aFourthProperty" ng-controller="SecondController">
+        Inside Div Four: {{ aThirdProperty }}
+      </div>
+
+
+      Outside myDirective1: {{ myProperty }}
+      <div my-directive1 ng-init="myProperty = 'wow, this is cool'">
+        Inside myDirective 1 : {{ myProperty }}
+      </div>
+
+      <div my-directive2 my-property="isolate scoping directive value">
+        Inside myDirective 2: {{ myProperty }}
+      </div>
+
+    </div>
+  </div>
+
+</div>

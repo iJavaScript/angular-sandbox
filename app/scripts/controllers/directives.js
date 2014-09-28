@@ -8,10 +8,14 @@
  * Controller of the angularSandboxApp
  */
 angular.module('angularSandboxApp')
-  .controller('DirectivesCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('DirectivesCtrl', function ($scope) {
+    })
+
+    .controller('SomeController', function ($scope) {
+    })
+
+    .controller('SecondController', function ($scope) {
+    })
+
+
+;
